@@ -1,0 +1,46 @@
+Hello
+<div class="search-container" [formGroup]="searchForm">
+  <input type="text" class="search-input" placeholder="Enter City" formControlName="city">
+  <button class="search-button" (click)="searchWeather()">Search</button>
+</div>
+
+<div class="content" *ngIf="weather">
+  <div class="row">
+    <div class="image-container">
+      <img src="../assets/images/Weather-report3.webp">
+    </div>
+    <div class="temperature">
+      {{weather.temp}}°C
+    </div>
+  </div>
+
+<div class="row">
+  <div class="section-2">
+      <div class="top-info">
+        <p>Expected temperature : {{weather.expected_temp}}</p>
+      </div>
+  </div>
+  <div class="bottom-info">
+    <div class="info-box">
+      <p>Current Weather: {{weather.current_weather}}</p>  
+    </div>
+    <div class="info-box">
+      <p>Humidity: {{weather.humidity}}</p>  
+    </div>
+  </div>
+  <div class="info-box">
+    <p>Wind Speed: {{weather.wind}}</p>  
+  </div>
+  <div class="info-box">
+    <p>Visibility: {{weather.visibility}}</p>  
+  </div>
+  <div class="info-box">
+    <p>UV Index: {{weather.uv_index}}</p>  
+  </div>
+  <div class="info-box">
+    <p>Aqi Description: {{weather.aqi_description}}</p>  
+  </div>
+
+</div>
+
+
